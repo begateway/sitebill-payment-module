@@ -43,29 +43,29 @@ if ( $this->getConfigValue('apps.paypal.enable') ) {
 }
 ```
 
-    следующий код
+следующий код
 
 ```php
-    if ( $this->getConfigValue('apps.begateway.enable') ) {
-      require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/admin/admin.php');
-      require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/site/site.php');
-      $begateway_site = new begateway_site();
+if ( $this->getConfigValue('apps.begateway.enable') ) {
+  require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/admin/admin.php');
+  require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/site/site.php');
+  $begateway_site = new begateway_site();
 
-      $rs .= $begateway_site->get_pay_button($bill_id, $bill_sum, $bill_payment_sum);
-    }
+  $rs .= $begateway_site->get_pay_button($bill_id, $bill_sum, $bill_payment_sum);
+}
 ```
 
-    Для того, чтобы отключить встроенный способ оплаты через Robokassa,
+Для того, чтобы отключить встроенный способ оплаты через Robokassa,
 закоментируйте следующий код, заменив
 
 ```php
-    $rs .= $this->jumpToRobokassa($bill_id);
+$rs .= $this->jumpToRobokassa($bill_id);
 ```
 
-    на
+на
 
 ```php
-    # $rs .= $this->jumpToRobokassa($bill_id);
+# $rs .= $this->jumpToRobokassa($bill_id);
 ```
 
 
@@ -135,38 +135,38 @@ if ( $this->getConfigValue('apps.paypal.enable') ) {
    Sitebill installation to add after the code
 
 ```php
-    if ( $this->getConfigValue('apps.paypal.enable') ) {
-      require_once (SITEBILL_DOCUMENT_ROOT.'/apps/paypal/admin/admin.php');
-      require_once (SITEBILL_DOCUMENT_ROOT.'/apps/paypal/site/site.php');
-      $paypal_site = new paypal_site();
+if ( $this->getConfigValue('apps.paypal.enable') ) {
+  require_once (SITEBILL_DOCUMENT_ROOT.'/apps/paypal/admin/admin.php');
+  require_once (SITEBILL_DOCUMENT_ROOT.'/apps/paypal/site/site.php');
+  $paypal_site = new paypal_site();
 
-      $rs .= $paypal_site->get_pay_button($bill_id, $bill_sum, $bill_payment_sum);
-    }
+  $rs .= $paypal_site->get_pay_button($bill_id, $bill_sum, $bill_payment_sum);
+}
 ```
 
-    the code as follows
+the code as follows
 
 ```php
-    if ( $this->getConfigValue('apps.begateway.enable') ) {
-      require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/admin/admin.php');
-      require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/site/site.php');
-      $begateway_site = new begateway_site();
+if ( $this->getConfigValue('apps.begateway.enable') ) {
+  require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/admin/admin.php');
+  require_once (SITEBILL_DOCUMENT_ROOT.'/apps/begateway/site/site.php');
+  $begateway_site = new begateway_site();
 
-      $rs .= $begateway_site->get_pay_button($bill_id, $bill_sum, $bill_payment_sum);
-    }
+  $rs .= $begateway_site->get_pay_button($bill_id, $bill_sum, $bill_payment_sum);
+}
 ```
 
-    To disable the Robokassa payment method installed in Sitebill by
+To disable the Robokassa payment method installed in Sitebill by
 default, change the code
 
 ```php
-    $rs .= $this->jumpToRobokassa($bill_id);
+$rs .= $this->jumpToRobokassa($bill_id);
 ```
 
-    to
+to
 
 ```php
-    # $rs .= $this->jumpToRobokassa($bill_id);
+# $rs .= $this->jumpToRobokassa($bill_id);
 ```
 
 ## Notes
