@@ -3,6 +3,7 @@ defined('SITEBILL_DOCUMENT_ROOT') or die('Restricted access');
 /**
  * beGateway admin backend
  * @author http://ecomcharge.com
+ * @version 1.0.0
  */
 class begateway_admin extends Object_Manager {
   /**

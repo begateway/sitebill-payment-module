@@ -1,6 +1,7 @@
 <?php
 /**
  * beGateway class
+ * @version 1.0.0
  */
 class begateway_site extends begateway_admin {
 

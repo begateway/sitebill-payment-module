@@ -1,3 +1,3 @@
-[submodule "src/apps/begateway/lib/begateway-api-php"]
-	path = src/apps/begateway/lib/begateway-api-php
+[submodule "apps/begateway/lib/begateway-api-php"]
+	path = apps/begateway/lib/begateway-api-php
 	url = https://github.com/beGateway/begateway-api-php.git
