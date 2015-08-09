@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install>
+	<name>begateway</name>
+	<creationDate>August 2015</creationDate>
+	<author>beGateway Development Team</author>
+	<authorEmail>techsupport@ecomcharge.com</authorEmail>
+  <authorUrl>https://ecomcharge.com</authorUrl>
+	<copyright>Copyright (C) 2015 eComCharge Ltd SIA.</copyright>
+	<license>MIT</license>
+    <backendMenu>true</backendMenu>
+	<version status="beta">1.0.0</version>
+	<administration>
+		<!-- Administration Menu Section -->
+		<menu>beGateway</menu>
+	</administration>	
+</install>
+
