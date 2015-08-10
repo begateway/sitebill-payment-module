@@ -116,7 +116,7 @@ $rs .= $this->jumpToRobokassa($bill_id);
 
    If the tab is not available, then select `Applications` in the Sitebill admin area and select `beGateway` in the appeared drop-down list.
 
-  ![Шаг 1](https://github.com/beGateway/sitebill-payment-module/raw/master/doc/pic1_1.png)
+  ![Шаг 1](https://github.com/beGateway/sitebill-payment-module/raw/master/doc/pic1_1_en.png)
 
    The tab `beGateway` will appear in `Settings`.
 
