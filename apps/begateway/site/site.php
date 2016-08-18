@@ -35,7 +35,7 @@ class begateway_site extends begateway_admin {
     \beGateway\Settings::$checkoutBase = 'https://' . $this->domain_checkout;
     #\beGateway\Logger::getInstance()->setLogLevel(\beGateway\Logger::DEBUG);
 
-    $transaction = new \beGateway\GetPaymentPageToken;
+    $transaction = new \beGateway\GetPaymentToken;
 
     $transaction->money->setCurrency($order_currency);
     $transaction->money->setAmount($payment_amount);
@@ -123,11 +123,11 @@ class begateway_site extends begateway_admin {
           $OutSum=$bill_info['sum'];
             $account_value = $this->_getAccountValue( $user_id );
             $account_value += $OutSum;
-            
+
             //set new account value
             $query = 'UPDATE '.DB_PREFIX.'_user SET account=? WHERE user_id=?';
             $stmt=$DBC->query($query, array($account_value, $user_id));
-            
+
             //set status
             $query = 'UPDATE '.DB_PREFIX.'_bill SET status=1 WHERE bill_id=?';
             $stmt=$DBC->query($query, array($bill_id));
